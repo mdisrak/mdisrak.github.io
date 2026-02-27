@@ -9,88 +9,91 @@
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family:'Segoe UI', sans-serif; background:#f4f6f9; color:#333; }
 
-    /* Navbar */
-    .navbar{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:15px 50px;
-      background:linear-gradient(90deg,#0d47a1,#1565c0);
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow:0 3px 10px rgba(0,0,0,0.1);
-    }
-    .nav-logo{
-      color:white; font-size:24px; font-weight:bold; text-decoration:none;
-    }
-    .nav-links{
-      list-style:none; display:flex; gap:25px;
-    }
-    .nav-links li a{
-      color:white; text-decoration:none; font-weight:500; padding:8px 12px;
-      border-radius:6px; transition:0.3s;
+ .navbar{
+  display:flex; /* logo aur links side-by-side */
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 50px;
+  background:linear-gradient(90deg,#0d47a1,#1565c0); /* gradient color */
+  position:sticky; /* scroll karte time top par stick ho jaye */
+  top:0;
+  z-index:1000;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1); /* thoda shadow */
+}
+
+.nav-links li a:hover{
+  background:white; /* hover me background white */
+  color:#0d47a1;  /* text color change */
+  border-radius:6px;
+}transition:0.3s;
     }
     .nav-links li a:hover{
       background:white; color:#0d47a1;
     }
 
     /* Hero Section */
-    .hero{
-      background:linear-gradient(135deg,#2196f3,#21cbf3);
-      color:white;
-      text-align:center;
-      padding:80px 20px;
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    }
-    .hero h1{font-size:48px; margin-bottom:20px; text-shadow:2px 2px 5px rgba(0,0,0,0.3);}
-    .hero p{font-size:20px; margin-bottom:30px;}
+.hero{
+  background:linear-gradient(135deg,#2196f3,#21cbf3); /* gradient blue */
+  color:white;
+  text-align:center;
+  padding:80px 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* diagonal bottom */
+}
 
-    .hero a{
-      padding:15px 30px;
-      background:white;
-      color:#0d47a1;
-      font-weight:bold;
-      text-decoration:none;
-      border-radius:50px;
-      transition:0.3s;
-    }
-    .hero a:hover{
-      background:#0d47a1;
-      color:white;
-      box-shadow:0 5px 15px rgba(0,0,0,0.2);
-    }
+.hero a{
+  padding:15px 30px;
+  background:white;
+  color:#0d47a1;
+  font-weight:bold;
+  text-decoration:none;
+  border-radius:50px;
+  transition:0.3s;
+}
+
+.hero a:hover{
+  background:#0d47a1;
+  color:white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
 
     /* Categories Section */
     .section{padding:60px 20px; text-align:center;}
     .section h2{font-size:36px; margin-bottom:40px; color:#0d47a1;}
     .cards{display:flex; flex-wrap:wrap; justify-content:center; gap:25px;}
-    .card{
-      background:white; padding:25px; width:250px;
-      border-radius:15px;
-      box-shadow:0 6px 15px rgba(0,0,0,0.08);
-      transition:0.3s;
-      cursor:pointer;
-    }
-    .card:hover{
-      transform:translateY(-10px);
-      box-shadow:0 10px 20px rgba(0,0,0,0.15);
-    }
+.card{
+  background:white; padding:25px; width:250px;
+  border-radius:15px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.08);
+  transition:0.3s;
+  cursor:pointer;
+}
+
+.card:hover{
+  transform:translateY(-10px); /* lift effect */
+  box-shadow:0 10px 20px rgba(0,0,0,0.15); /* stronger shadow */
+}
     .card h3{color:#1565c0; margin-bottom:15px;}
 
     /* Footer */
     footer{
-      background:#0d47a1; color:white;
-      text-align:center; padding:20px;
-      margin-top:40px;
-    }
+  background:#0d47a1; color:white;
+  text-align:center; padding:20px;
+  margin-top:40px;
+}
 
     /* Responsive */
-    @media(max-width:768px){
-      .nav-links{flex-direction:column; gap:15px;}
-      .cards{flex-direction:column; align-items:center;}
-      .hero h1{font-size:36px;}
-      .hero p{font-size:18px;}
+@media(max-width:768px){
+  .nav-links{
+    flex-direction:column; /* links stacked */
+    gap:15px;
+  }
+  .cards{
+    flex-direction:column;
+    align-items:center; /* cards vertically arrange */
+  }
+  .hero h1{font-size:36px;}
+  .hero p{font-size:18px;}
+}
     }
   </style>
 </head>
