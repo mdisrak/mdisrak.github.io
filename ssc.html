@@ -1,15 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SSC Preparation</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSC Exam Preparation - Study Warrior</title>
+  <style>
+    /* Reset & General */
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Segoe UI',sans-serif;background:#f4f6f9;color:#333;}
+
+    /* Navbar */
+    .navbar{
+      display:flex; justify-content:space-between; align-items:center;
+      padding:15px 50px; background:linear-gradient(90deg,#6a1b9a,#8e24aa);
+      position:sticky; top:0; z-index:1000; box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    }
+    .nav-logo{color:white;font-size:24px;font-weight:bold;text-decoration:none;}
+    .nav-links{list-style:none; display:flex; gap:25px; margin:0; padding:0;}
+    .nav-links li a{
+      color:white; text-decoration:none; font-weight:500; padding:8px 12px; border-radius:6px; transition:0.3s;
+    }
+    .nav-links li a:hover{background:white;color:#6a1b9a;}
+
+    /* Hero Section */
+    .hero{
+      background:linear-gradient(135deg,#8e24aa,#ba68c8);
+      color:white; text-align:center; padding:80px 20px;
+      border-bottom-left-radius:50% 10%; 
+      border-bottom-right-radius:50% 10%;
+    }
+    .hero h1{font-size:48px; margin-bottom:20px; text-shadow:2px 2px 5px rgba(0,0,0,0.3);}
+    .hero p{font-size:20px; margin-bottom:30px;}
+    .hero a{
+      padding:15px 30px; background:white; color:#6a1b9a; font-weight:bold;
+      text-decoration:none; border-radius:50px; transition:0.3s;
+    }
+    .hero a:hover{
+      background:#6a1b9a; color:white; box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Cards Section */
+    .section{padding:50px 20px; text-align:center;}
+    .section h2{font-size:32px; margin-bottom:40px; color:#6a1b9a;}
+    .cards{display:flex; flex-wrap:wrap; justify-content:center; gap:25px;}
+    .card{
+      background:#f3e5f5; padding:25px; width:250px; border-radius:20px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.08); transition:0.3s; cursor:pointer;
+    }
+    .card:hover{transform:translateY(-10px); box-shadow:0 10px 20px rgba(0,0,0,0.15);}
+    .card h3{color:#6a1b9a; margin-bottom:15px;}
+    .btn{
+      display:inline-block; padding:10px 18px; background:#6a1b9a; color:white;
+      text-decoration:none; border-radius:6px; transition:0.3s;
+    }
+    .btn:hover{background:#8e24aa;}
+
+    /* Footer */
+    footer{background:#6a1b9a;color:white;text-align:center;padding:20px;margin-top:40px;}
+
+    /* Responsive */
+    @media(max-width:768px){
+      .nav-links{flex-direction:column;gap:15px;}
+      .cards{flex-direction:column;align-items:center;}
+      .hero h1{font-size:36px;}
+      .hero p{font-size:18px;}
+    }
+  </style>
 </head>
-<body style="font-family:Arial; text-align:center; background:#f4f6f9;">
+<body>
 
-<h1>SSC Preparation</h1>
-<p>SSC CGL, CHSL, MTS Notes Coming Soon...</p>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">Study Warrior</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ssc.html">SSC</a></li>
+      <li><a href="railway.html">Railway</a></li>
+      <li><a href="group-d.html">Group D</a></li>
+      <li><a href="previous-papers.html">Previous Papers</a></li>
+    </ul>
+  </nav>
 
-<a href="index.html">⬅ Back to Home</a>
+  <!-- Hero -->
+  <div class="hero">
+    <h1>SSC Exam Preparation</h1>
+    <p>All Subjects + Previous Papers + Free PDF Downloads</p>
+    <a href="previous-papers.html">Download PDFs</a>
+  </div>
+
+  <!-- Subject-wise Cards -->
+  <div class="section">
+    <h2>Subjects & PDFs</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Mathematics</h3>
+        <a href="pdfs/maths-ssc-2022.pdf" class="btn" download>Download PDF</a>
+      </div>
+      <div class="card">
+        <h3>Reasoning</h3>
+        <a href="pdfs/reasoning-ssc-2022.pdf" class="btn" download>Download PDF</a>
+      </div>
+      <div class="card">
+        <h3>General Knowledge</h3>
+        <a href="pdfs/gk-ssc-2022.pdf" class="btn" download>Download PDF</a>
+      </div>
+      <div class="card">
+        <h3>English</h3>
+        <a href="pdfs/english-ssc-2022.pdf" class="btn" download>Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Study Warrior | SSC Section
+  </footer>
 
 </body>
 </html>
