@@ -1,118 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Previous Papers - Study Warrior</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    /* Reset & General */
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'Segoe UI',sans-serif;background:#f4f6f9;color:#333;}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Previous Papers - Study Warrior</title>
 
-    /* Navbar */
-    .navbar{
-      display:flex; justify-content:space-between; align-items:center;
-      padding:15px 50px; background:linear-gradient(90deg,#0d47a1,#1565c0);
-      position:sticky; top:0; z-index:1000; box-shadow:0 3px 10px rgba(0,0,0,0.1);
-    }
-    .nav-logo{color:white;font-size:24px;font-weight:bold;text-decoration:none;}
-    .nav-links{list-style:none; display:flex; gap:25px; margin:0; padding:0;}
-    .nav-links li a{
-      color:white; text-decoration:none; font-weight:500; padding:8px 12px; border-radius:6px; transition:0.3s;
-    }
-    .nav-links li a:hover{background:white;color:#0d47a1;}
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d47a1">
 
-    /* Hero Section */
-    .hero{
-      background:linear-gradient(135deg,#2196f3,#21cbf3);
-      color:white; text-align:center; padding:80px 20px;
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    }
-    .hero h1{font-size:48px; margin-bottom:15px; text-shadow:2px 2px 5px rgba(0,0,0,0.3);}
-    .hero p{font-size:20px; margin-bottom:30px;}
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(()=>console.log("Service Worker Registered"))
+    .catch(err=>console.log("SW Failed", err));
+}
+</script>
 
-    /* Cards Section */
-    .section{padding:50px 20px; text-align:center;}
-    .section h2{font-size:36px; margin-bottom:40px; color:#0d47a1;}
-    .cards{display:flex; flex-wrap:wrap; justify-content:center; gap:25px;}
-    .card{
-      background:white; padding:25px; width:250px; border-radius:20px;
-      box-shadow:0 6px 15px rgba(0,0,0,0.08); transition:0.3s; cursor:pointer; position:relative;
-    }
-    .card i{font-size:30px; color:#1565c0; margin-bottom:15px; transition:0.3s;}
-    .card:hover i{color:#0d47a1;}
-    .card h3{color:#1565c0; margin-bottom:15px; transition:0.3s;}
-    .card:hover h3{color:#0d47a1;}
-    .btn{
-      display:inline-block; padding:10px 18px; background:#1565c0; color:white;
-      text-decoration:none; border-radius:6px; transition:0.3s; margin-top:10px;
-    }
-    .btn:hover{background:#0d47a1; transform:translateY(-3px); box-shadow:0 5px 15px rgba(0,0,0,0.2);}
-
-    /* Footer */
-    footer{background:#0d47a1;color:white;text-align:center;padding:20px;margin-top:40px;}
-
-    /* Responsive */
-    @media(max-width:768px){
-      .nav-links{flex-direction:column;gap:15px;}
-      .cards{flex-direction:column;align-items:center;}
-      .hero h1{font-size:36px;}
-      .hero p{font-size:18px;}
-    }
-  </style>
+<style>
+/* Same CSS as index.html for consistency */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',sans-serif;background:#f4f6f9;color:#333;}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:15px 50px;background:linear-gradient(90deg,#0d47a1,#1565c0);position:sticky;top:0;z-index:1000;box-shadow:0 3px 10px rgba(0,0,0,0.1);}
+.nav-links{display:flex;gap:20px;list-style:none;}
+.nav-links li a{color:white;text-decoration:none;font-weight:bold;padding:6px 12px;border-radius:6px;transition:0.3s;}
+.nav-links li a:hover{background:white;color:#0d47a1;}
+.hero{background:linear-gradient(135deg,#2196f3,#21cbf3);color:white;text-align:center;padding:80px 20px;clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);}
+.hero a{padding:15px 30px;background:white;color:#0d47a1;font-weight:bold;text-decoration:none;border-radius:50px;transition:0.3s;}
+.hero a:hover{background:#0d47a1;color:white;box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+.section{padding:60px 20px;text-align:center;}
+.section h2{font-size:36px;margin-bottom:40px;color:#0d47a1;}
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;}
+.card{background:white;padding:25px;width:250px;border-radius:15px;box-shadow:0 6px 15px rgba(0,0,0,0.08);transition:0.3s;cursor:pointer;}
+.card:hover{transform:translateY(-10px);box-shadow:0 10px 20px rgba(0,0,0,0.15);}
+.card h3{color:#1565c0;margin-bottom:15px;}
+.card i{font-size:28px;margin-bottom:10px;}
+.btn{display:inline-block;padding:10px 18px;background:#1565c0;color:white;text-decoration:none;border-radius:6px;margin-top:10px;transition:0.3s;}
+.btn:hover{background:#0d47a1;}
+footer{background:#0d47a1;color:white;text-align:center;padding:20px;margin-top:40px;}
+@media(max-width:768px){.nav-links{flex-direction:column;gap:15px;}.cards{flex-direction:column;align-items:center;}}
+</style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a href="index.html" class="nav-logo">Study Warrior</a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="ssc.html">SSC</a></li>
-      <li><a href="railway.html">Railway</a></li>
-      <li><a href="group-d.html">Group D</a></li>
-      <li><a href="previous-papers.html">Previous Papers</a></li>
-    </ul>
-  </nav>
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">Study Warrior</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="ssc.html">SSC</a></li>
+    <li><a href="railway.html">Railway</a></li>
+    <li><a href="group-d.html">Group D</a></li>
+    <li><a href="previous-papers.html">Previous Papers</a></li>
+  </ul>
+</nav>
 
-  <!-- Hero -->
-  <div class="hero">
-    <h1>Previous Papers</h1>
-    <p>Download solved papers for SSC, Railway, Group D & UPSC</p>
-  </div>
+<!-- Hero -->
+<div class="hero">
+  <h1>Previous Exam Papers</h1>
+  <p>Download solved papers by subject & year</p>
+</div>
 
-  <!-- Subject-wise Cards -->
-  <div class="section">
-    <h2>Exam-wise Papers</h2>
-    <div class="cards">
-      <div class="card">
-        <i class="fas fa-book"></i>
-        <h3>SSC Papers</h3>
-        <a href="pdfs/ssc-papers-2022.pdf" class="btn" download>Download PDF</a>
-      </div>
-      <div class="card">
-        <i class="fas fa-book"></i>
-        <h3>Railway Papers</h3>
-        <a href="pdfs/railway-papers-2022.pdf" class="btn" download>Download PDF</a>
-      </div>
-      <div class="card">
-        <i class="fas fa-book"></i>
-        <h3>Group D Papers</h3>
-        <a href="pdfs/groupd-papers-2022.pdf" class="btn" download>Download PDF</a>
-      </div>
-      <div class="card">
-        <i class="fas fa-book"></i>
-        <h3>UPSC Papers</h3>
-        <a href="pdfs/upsc-papers-2022.pdf" class="btn" download>Download PDF</a>
-      </div>
+<!-- Subject-wise Cards -->
+<div class="section">
+  <h2>Download Previous Papers</h2>
+  <div class="cards">
+
+    <div class="card">
+      <i class="fas fa-calculator"></i>
+      <h3>SSC - Mathematics</h3>
+      <a href="pdfs/ssc-maths-2022.pdf" class="btn" download>Download PDF</a>
     </div>
-  </div>
 
-  <!-- Footer -->
-  <footer>
-    © 2026 Study Warrior | Previous Papers
-  </footer>
+    <div class="card">
+      <i class="fas fa-brain"></i>
+      <h3>SSC - Reasoning</h3>
+      <a href="pdfs/ssc-reasoning-2022.pdf" class="btn" download>Download PDF</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-globe"></i>
+      <h3>Railway - Group D</h3>
+      <a href="pdfs/railway-groupd-2022.pdf" class="btn" download>Download PDF</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-book"></i>
+      <h3>Railway - NTPC</h3>
+      <a href="pdfs/railway-ntpc-2022.pdf" class="btn" download>Download PDF</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-book-open"></i>
+      <h3>Group D - Reasoning</h3>
+      <a href="pdfs/groupd-reasoning-2022.pdf" class="btn" download>Download PDF</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  © 2026 Study Warrior | Previous Papers
+</footer>
 
 </body>
 </html>
